@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Recipe Sharing Platform
+    link(rel="stylesheet", href="/css/details.css")
+  body
+    block content
+      .recipe-detail-container
+        .recipe-card
+          img.recipe-image(src=recipe.img alt=recipe.title)
+          .recipe-content
+            h1.recipe-title= recipe.title
+            p.recipe-description= recipe.description
+        .action-links
+          a.edit-link(href=`/recipes/edit/${recipe.id}`) Edit Recipe
+          a.back-link(href="/recipes") ← Back to Recipes

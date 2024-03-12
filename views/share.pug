@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Recipe Sharing Platform
+    link(rel="stylesheet", href="css/share.css") 
+
+  body
+block content
+  .container.share-container
+    h1 Share Your Best Recipe
+    form(action="/recipe/create" method="POST" enctype="multipart/form-data")
+      .form-group
+        label(for="title") Recipe Title:
+        input(type="text" id="title" name="title" required)
+      .form-group
+        label(for="description") Recipe Description:
+        textarea(id="description" name="description" required)
+      .form-group
+        label(for="image") Recipe Image:
+        input(type="file" id="image" name="image" accept="image/png, image/jpeg")
+      button(type="submit") Share Recipe

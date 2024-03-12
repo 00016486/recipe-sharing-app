@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Recipe Sharing Platform
+    link(rel="stylesheet", href="css/style.css")
+  body
+    header
+      nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/recipes") Recipes
+             li
+            a(href="/share") Share
+
+    .hero
+      img(src="/images/logo.png", alt="Variety of Dishes")
+      h1 Welcome to the Recipe Sharing Platform
+      p Explore, share, and discover the best recipes from around the world!
+    .featured-recipes
+      h2 Featured Recipes
+      .recipes
+        // Example recipe structure, repeat for each recipe
+        .recipe
+          img(src="images/kaklet.jpeg", alt="Recipe Title")
+          h3 Recipe Title
+          p Short description of the recipe...
+          a(href="/recipes/recipe-detail") Read More
+    footer
+      p &copy; This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service

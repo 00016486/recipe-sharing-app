@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Recipe Sharing Platform
+    link(rel="stylesheet", href="css/recipes.css") 
+
+  body
+    header
+      nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/recipes") Recipes
+          li
+            a(href="/share") Share
+
+    block content
+      .container
+        h1 Featured Recipes
+        .recipes-list
+          each recipe in recipes
+            .recipe-card
+              img.recipe-img(src=recipe.img alt=recipe.title)
+              .recipe-info
+                h2.recipe-title #{recipe.title}
+                p.recipe-description #{recipe.description}
+                a.recipe-link(href=`/recipes/${recipe.id}`) View Recipe
+                form(action=`/recipes/remove/${recipe.id}` method="POST")
+                  button(type="submit" class="remove-link") Remove
