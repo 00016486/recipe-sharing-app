@@ -1,0 +1,137 @@
+/* Reset some basic elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  background: #007bff;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #0779e4 3px solid;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* Hero Image */
+.hero {
+  position: relative;
+
+  min-height: 400px;
+  color: #979797;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 20px;
+}
+.hero img {
+  width: 500px;
+}
+
+/* Featured Recipes */
+.featured-recipes {
+  margin: 40px auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.recipe {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe h3 {
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.recipe p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background: #007bff;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header,
+  .hero,
+  .featured-recipes,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+  }
+}

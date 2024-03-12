@@ -1,0 +1,82 @@
+.recipe-detail-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align the items horizontally */
+  justify-content: center; /* Center-align the items vertically */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.recipe-card {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  margin-bottom: 20px; /* Add space between the card and the action links */
+}
+.recipe-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recipe-content {
+  padding: 20px;
+}
+
+.recipe-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.recipe-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  background: none;
+  color: #007bff;
+  padding: 8px 15px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: #007bff;
+  color: #ffffff;
+}
+
+/* Existing styles */
+.action-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-link,
+.back-link {
+  display: inline-block;
+  background: none;
+  color: #007bff;
+  padding: 8px 15px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.edit-link:hover,
+.back-link:hover {
+  background: #007bff;
+  color: #ffffff;
+}
